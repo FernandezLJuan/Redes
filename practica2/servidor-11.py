@@ -4,9 +4,6 @@ import sys,os
 porto=sys.argv[1:]
 
 socketServer=socket.socket(socket.AF_INET,socket.SOCK_STREAM, 0, fileno=None)
-
-cadea='Hola mundo'
-
 socketServer.bind(('0.0.0.0',int(porto[0])))
 
 socketServer.listen(4)
@@ -23,7 +20,7 @@ while True:
 	
 	mensaxe_recibida=socketConexion.recv(8)
 
-	print("Mensaxe recibida do servidor {}".format(mensaxe_recibida.decode()))
+	print("Mensaxe recibida do cliente {}".format(mensaxe_recibida.decode()))
 
 
 print('Cerramos la conexión')
